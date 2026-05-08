@@ -62,7 +62,6 @@ class DocumentsProcesator:
 
         for i, archivo in enumerate(archivos, 1):
             factura = self._extraer_numero_factura(str(archivo))
-            print(factura)
             tipo = self._extraer_tipo_documento(archivo.name)
 
             if tipo == "Desconocido":
