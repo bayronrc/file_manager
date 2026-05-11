@@ -1,69 +1,90 @@
-# FileManager app
+## File Manager
 
-## Run the app
+![Screamshot](image.png)
 
-### uv
+A cross-platform desktop and web file manager built with Python and [Flet](https://flet.dev/).
+Runs natively on Windows, macOS, Linux, Android, iOS, and as a web app — all from a single codebase.
 
-Run as a desktop app:
+## Tech stack
+- **Python** - Core languge
+- **Flet** - cross-platform UI framework
+- **pip** - fast Python package manager
+
+## Features
+
+- Browse and navigate local file system
+- Cross-platform: desktop, mobile, and web from same codebase
+- Ligthweiht and fast startup with `pip`
+
+## Get Started
+
+### Prerequisites
+
+- Python 3.11+
+- [pip](https://pypi.org/project/pip/) installed
+
+### Installation
+
+clone the repository
 
 ```bash
-uv run flet run
+git clone https://github.com/bayronrc/file_manager.git
+cd file_manager
+```
+create a virtual enviroment `venv`:
+```bash
+python -m venv .venv
+```
+Linux
+```bash
+source venv/bin/activate
 ```
 
-Run as a web app:
+Windows
+```bash
+.\venv\Scripts\activate
+```
+install the dependences
 
 ```bash
-uv run flet run --web
+pip install - r requirements.txt
 ```
+### Run
+
+```bash
+#desktop
+flet run
+
+# web app
+flet run -w
+
+# watch changes
+flet run -r
+```
+## build
+
+| Platform | Command |
+|----------|---------|
+| Android  | `flet build apk -v` |
+| iOS      | `flet build ipa -v` |
+| Windows  | `flet build windows -v` |
+| macOS    | `flet build macos -v` |
+| Linux    | `flet build linux -v` |
+| Web      | `flet build web -v` |
+
 
 For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/).
 
-## Build the app
-
-### Android
+## Project Sctruture
 
 ```bash
-flet build apk -v
+file_manager/
+├── src/          # Application source code
+├── requirements.txt
+└── pyproject.toml
+└── .gitignore
 ```
 
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
+## Licence
 
-### iOS
-
-```bash
-flet build ipa -v
-```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-
-```bash
-flet build macos -v
-```
-
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
-
-### Linux
-
-```bash
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-
-```bash
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
-
-### Web
-
-```bash
-flet build web -v
-```
-
-For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
+MIT
