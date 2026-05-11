@@ -1,6 +1,6 @@
 ## File Manager
 
-![Screamshot](image.png)
+![Screamshot](/src/docs/image.png)
 
 A cross-platform desktop and web file manager built with Python and [Flet](https://flet.dev/).
 Runs natively on Windows, macOS, Linux, Android, iOS, and as a web app — all from a single codebase.
